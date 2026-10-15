@@ -10,8 +10,14 @@ public:
             mx[x]++;
         }
         for(int x:nums){
-            if(mx[x]>n/2){
-                return x;
+            fre =max(fre,mx[x]);
+            
+
+        
+        }
+        for(auto a:mx){
+            if(fre==a.second){
+                return a.first;
             }
         }
         return 0;
